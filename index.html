@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>loading and parsing CSV</title>
+  </head>
+  
+  <body>
+    <script>
+    
+    // const promise= fetch(url)
+    // promise.then(res=>res.text().then(
+    // text=>console.log(text)))
+    const fetchText = async (url) => {
+    	const res = await fetch(url)
+      return   await res.text()
+      
+    }
+   
+      const csvUrl = "https://gist.githubusercontent.com/mbdev3/056e2a5e2db68374e50b60c3226d0c21/raw/CSSNamedcolors.csv" 
+      fetchText(csvUrl).then(text=>console.log(text))
+    </script>
+  </body>
+</html>
